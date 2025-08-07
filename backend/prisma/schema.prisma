@@ -28,6 +28,7 @@ model Warehouse {
   name String
   location String
   inventories Inventory[]
+  orders Order[]
 }
 
 model Inventory {
