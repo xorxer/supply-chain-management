@@ -57,5 +57,94 @@
             "name": "Texas Distribution Center",
             "location": "Dallas, TX"
         }
+    ],
+    "inventories": [
+        { "productId": 1, "warehouseId": 1, "quantity": 45 }, 
+        { "productId": 2, "warehouseId": 1, "quantity": 30 }, 
+        { "productId": 4, "warehouseId": 1, "quantity": 85 },
+        { "productId": 5, "warehouseId": 1, "quantity": 60 },
+        { "productId": 6, "warehouseId": 1, "quantity": 25 }, 
+        { "productId": 1, "warehouseId": 2, "quantity": 35 }, 
+        { "productId": 3, "warehouseId": 2, "quantity": 20 }, 
+        { "productId": 4, "warehouseId": 2, "quantity": 90 },
+        { "productId": 7, "warehouseId": 2, "quantity": 50 }, 
+        { "productId": 1, "warehouseId": 3, "quantity": 55 }, 
+        { "productId": 2, "warehouseId": 3, "quantity": 40 }, 
+        { "productId": 3, "warehouseId": 3, "quantity": 25 }, 
+        { "productId": 5, "warehouseId": 3, "quantity": 70 },
+        { "productId": 6, "warehouseId": 3, "quantity": 30 }, 
+        { "productId": 7, "warehouseId": 3, "quantity": 65 }, 
+        { "productId": 1, "warehouseId": 4, "quantity": 40 },
+        { "productId": 4, "warehouseId": 4, "quantity": 75 },
+        { "productId": 5, "warehouseId": 4, "quantity": 55 },
+        { "productId": 7, "warehouseId": 4, "quantity": 45 }, 
+        { "productId": 2, "warehouseId": 5, "quantity": 35 }, 
+        { "productId": 3, "warehouseId": 5, "quantity": 30 }, 
+        { "productId": 6, "warehouseId": 5, "quantity": 20 }, 
+        { "productId": 7, "warehouseId": 5, "quantity": 40 }
+    ],
+    "orders": [
+        {
+            "productId": 1,
+            "warehouseId": 1,
+            "quantity": 2,
+            "status": "DELIVERED",
+            "createdAt": "2024-08-05T10:00:00Z"
+        },
+        {
+            "productId": 5,
+            "warehouseId": 1,
+            "quantity": 3,
+            "status": "SHIPPED",
+            "createdAt": "2024-08-09T14:30:00Z"
+        },
+        {
+            "productId": 4,
+            "warehouseId": 2,
+            "quantity": 5,
+            "status": "PROCESSING",
+            "createdAt": "2024-08-10T09:15:00Z"
+        },
+        {
+            "productId": 2,
+            "warehouseId": 3,
+            "quantity": 1,
+            "status": "PENDING",
+            "createdAt": "2024-08-11T16:45:00Z"
+        },
+        {
+            "productId": 7,
+            "warehouseId": 4,
+            "quantity": 4,
+            "status": "CANCELLED",
+            "createdAt": "2024-08-08T11:20:00Z"
+        },
+        {
+            "productId": 6,
+            "warehouseId": 5,
+            "quantity": 1,
+            "status": "DELAYED",
+            "createdAt": "2024-08-07T13:10:00Z"
+        }
+    ],
+    "shipments": [
+        {
+            "orderId": 1,
+            "expectedDeliveryDate": "2024-08-11T12:00:00Z",
+            "actualDeliveryDate": "2024-08-10T15:30:00Z",
+            "status": "DELIVERED"
+        },
+        {
+            "orderId": 2,
+            "expectedDeliveryDate": "2024-08-14T12:00:00Z",
+            "actualDeliveryDate": null,
+            "status": "SHIPPED"
+        },
+        {
+            "orderId": 6,
+            "expectedDeliveryDate": "2024-08-12T12:00:00Z",
+            "actualDeliveryDate": null,
+            "status": "DELAYED"
+        }
     ]
 }

@@ -15,6 +15,8 @@ model Product {
   category String
   inventories Inventory[]
   orders Order[]
+
+  @@map("products")
 }
 
 model Warehouse {
@@ -23,6 +25,8 @@ model Warehouse {
   location String
   inventories Inventory[]
   orders Order[]
+
+  @@map("warehouses")
 }
 
 model Inventory {
@@ -34,6 +38,8 @@ model Inventory {
   quantity Int
   
   @@unique([productId, warehouseId])
+
+  @@map("inventories")
 }
 
 model Order {
@@ -47,6 +53,8 @@ model Order {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   shipment Shipment?
+
+  @@map("orders")
 }
 
 enum OrderStatus {
@@ -68,6 +76,7 @@ model Shipment {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   
+  @@map("shipments")
 }
 
 enum ShipmentStatus {
